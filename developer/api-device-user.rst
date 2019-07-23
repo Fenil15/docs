@@ -7,6 +7,8 @@ This family of device APIs provided by dronahq.js helps in interacting with the 
 It has the following method(s) -
 
 	- :ref:`getprofile() <get-profile>`
+	- :ref:`setLoginDetails() <set-login-details>`
+
 
 .. _get-profile:
 
@@ -58,3 +60,19 @@ This method gives the profile object of the user logged into the app.
 	};
 
 	DronaHQ.user.getProfile(fnSuccess, fnError);
+
+
+.. _set-login-details:
+
+setLoginDetails()
+-----------------
+
+This method is an alternative of login, when SSO sign-in process used into the app for user. 
+In this sign-in process a cookie is set which needs to be sent to sever for authentication is ecypted using base64 encoding and passed using this method to server.
+
+
+.. code:: javascript
+
+	var cookie = 'base64 encrypted cookie'
+
+	DronaHQ.user.getProfile(fnSuccess, fnError, cookie);
