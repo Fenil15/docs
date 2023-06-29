@@ -20,7 +20,7 @@ This API can be used to assign a list of users to a group and can also be used t
 
 .. code:: text
 	
-	POST /groups/{groupId}/actions/assign_user
+	PUT /groups/{groupId}/actions/assign_user
 
 **REQUEST PARAMETERS**
 
